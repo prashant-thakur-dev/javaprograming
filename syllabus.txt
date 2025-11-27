@@ -1,0 +1,24 @@
+operators
+flow control
+loop
+switch statement
+number program
+pattern array
+string
+time complexicity and space
+recursion
+linked list
+stack'queue
+tree
+graph
+shortring and searching
+leetcodett
+
+
+
+“SOLID” design principle
+God Class
+What is coupling
+Dependency Injection
+Garbage Collection:
+

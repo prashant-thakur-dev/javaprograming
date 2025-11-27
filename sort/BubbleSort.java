@@ -1,0 +1,25 @@
+package src.sort;
+
+public class BubbleSort {
+    public static void main(String[] args) {
+        int[] arr = {5,4,1,2,3};
+        int[] res = bubbulSort(arr);
+        for(int r:res){
+            System.out.println(r);
+        }
+    }
+
+    private static int[] bubbulSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-1-i; j++) {
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+}

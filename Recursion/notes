@@ -1,0 +1,6 @@
+Object o1 = "mohen"
+Object o2 = 232
+Object o3 = 35.26                               upcasting Process
+Object o4 = '@'
+Object o5 = true
+

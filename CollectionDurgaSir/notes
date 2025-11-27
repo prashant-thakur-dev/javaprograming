@@ -1,0 +1,185 @@
+We use collection because of these problem:-
+array are fixed in size
+only contain homogeneous type of data
+on underline Datatype
+
+an array is an index collection of fixed no. of homogenious data elements
+the main advantage of array is we can represent multiple values using single variable of readailty of code will be improved
+
+=======>limitation of arrays arrays are fixed in size once we create an array there is no chance of inc or dec the size baced on our requ
+due to this to use to array concept compansory we should know size in advance which may not possible always
+
+=======>array can hold only homogenious type element
+eg>>>
+        Stusent[] s = new Student[10000];
+        s[0] = new Student();
+        s[1] = new Coustomer();//CE
+
+we can solve this using object type array
+eg>>>>>
+        Object[] s = new Object[10000];
+        s[0] = new Student();
+        s[0] = new Coustomer();
+
+
+=======>Array concept is not implemented based on standard data structure and hence redemat method support is not available
+for every this we have to write new implementation for every method
+
+=======>overcome
+we should go for collection concept.
+
+collection are growable in nature ie based on req we can inc or dec size
+collection can hold both homo as well as hetro data.
+every collection class implemented based on some standard data structure hence for every req remediate method support is available being a programmer we are responsible to use those method and we are not resp to implement those method
+
+collection ====> if we want to represent a group if individual obj as a single entity then we should go for collection
+collection framework ======> it contains sevral classes and interfaces which can be used to represent a group of individual obj as single entity
+
+Difference between Array and Collection in Java
+
+Aspect               | Array                                           | Collection (Java Collections Framework)
+--------------------------------------------------------------------------------------------------------------
+Definition            | Fixed-size data structure to store elements     | A framework providing dynamic data structures
+                      | of the same type.                              | like List, Set, Queue, Map.
+--------------------------------------------------------------------------------------------------------------
+Size                  | Fixed once declared.                           | Dynamic, can grow or shrink automatically.
+--------------------------------------------------------------------------------------------------------------
+Type of Elements      | Homogeneous (all elements must be same type).  | Can be homogeneous (with Generics) but flexible.
+--------------------------------------------------------------------------------------------------------------
+Memory                | Stored in contiguous memory locations.         | May or may not be contiguous depending on implementation.
+--------------------------------------------------------------------------------------------------------------
+Access                | Direct access by index (fast, O(1)).           | Depends on implementation (e.g., ArrayList O(1),
+                      |                                                 | LinkedList O(n)).
+--------------------------------------------------------------------------------------------------------------
+Methods               | Very few built-in methods (via Arrays class).  | Rich API (add, remove, contains, sort, etc.).
+--------------------------------------------------------------------------------------------------------------
+Performance           | Faster for fixed-size and index-based access.  | Slightly slower due to flexibility and extra features.
+--------------------------------------------------------------------------------------------------------------
+Data Structures       | Only one (basic array).                        | Many types (List, Set, Queue, Map, etc.).
+--------------------------------------------------------------------------------------------------------------
+Type Safety           | Strongly typed (e.g., int[], String[]).        | Generic type safety (e.g., List<String>, Set<Integer>).
+--------------------------------------------------------------------------------------------------------------
+Package               | Built-in part of Java language.                | Belongs to java.util package.
+
+
+
+9 key interfaces of collection framework
+=========================================
+
+Collection(I) 1.2
+
+if we want to represent individual entity then we should go for collection
+define most common method which are applicable for any collection object
+in general CI is considered as root interface of CI.
+there is no concrete class which implement CI directly
+
+Aspect            | Collection                           | Collections
+----------------------------------------------------------------------------------
+Definition        | Root interface in Java Collections   | Utility class with static methods
+                  | Framework.                           | to operate on collections.
+----------------------------------------------------------------------------------
+Type              | Interface                            | Class (final)
+----------------------------------------------------------------------------------
+Package           | java.util                            | java.util
+----------------------------------------------------------------------------------
+Purpose           | Represents a group of objects.       | Provides algorithms (sort, search,
+                  |                                      | min, max, synchronize, etc.).
+----------------------------------------------------------------------------------
+Implemented By    | List, Set, Queue, etc.               | Works on Collection objects (List, Set, etc.)
+----------------------------------------------------------------------------------
+Example           | Collection<String> list = new ArrayList<>(); | Collections.sort(list);
+
+
+List(I) 1.2
+
+it is the child interface of collection
+if we want to represent a group of individual obj as singal entity whare duplicate is allowed and insersion order is must be preserved.
+
+        ArrayList(C) 1.2 LinkedList(C)1.2   Vector(C)
+                                        |       1.0  legacy classes
+                                     Stack(C)
+
+          *****  in 1.2 version vector and stack class were re engineered to implement list interface
+
+
+Set(I) 1.2
+
+it is the child interface of collection
+if we want to represent a group of individual obj as singal entity where duplicate is not allowed and insersion order is not required.
+
+        HashSet 1.2
+            |
+        LinkedHashSet 1.4
+
+SortedSet(I) 1.2
+
+it is the child interface of set
+if we want to represent a group of individual obj as singal entity where duplicate is not allowed and all obj should be inserted in some shorting order.
+
+NavigableSet(I) 1.6
+
+it is the child interface of SortedSet
+it contain several method for navigation purposes
+
+TreeSet(C) 1.2
+
+Aspect              | List                               | Set
+-------------------------------------------------------------------------------------
+Definition          | Ordered collection (sequence).     | Collection of unique elements.
+-------------------------------------------------------------------------------------
+Duplicates          | Allows duplicates.                 | Does NOT allow duplicates.
+-------------------------------------------------------------------------------------
+Order               | Maintains insertion order.         | No guaranteed order
+                    | (ArrayList, LinkedList).           | (HashSet random, LinkedHashSet insertion, TreeSet sorted).
+-------------------------------------------------------------------------------------
+Indexing            | Supports index-based access.       | No indexing, cannot access by position.
+-------------------------------------------------------------------------------------
+Null Values         | Allows multiple nulls.             | Allows at most one null (HashSet, LinkedHashSet).
+-------------------------------------------------------------------------------------
+Implementations     | ArrayList, LinkedList, Vector.     | HashSet, LinkedHashSet, TreeSet.
+
+
+Queue(I) 1.5
+
+Queue is child interface of collection
+ If you want to represent a group of individual object prior to processing then queue
+ Visually queues follows first in first out order but based on our requirement we can implement our own priority order also example all mail IDS we have to store in some structure  We added mail ID mail IDS the same order only  First choice
+
+    PriorityQueue        BlockingQueue
+                                |
+                            PriorityBlockingQueue, LinkedBlockingQueue
+
+
+Map
+ShortedMap
+NavigableMap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
